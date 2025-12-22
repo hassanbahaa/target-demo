@@ -37,11 +37,24 @@ const translations = {
     "hero.cta": "ابدأ الآن",
 
     // About Section
+    "about.meta.title":
+      "من نحن | تارجت للتسويق الفندقي - إدارة وتسويق الفنادق الاحترافي",
+    "about.meta.description":
+      "تعرف على تارجت للتسويق الفندقي، الشريك الموثوق في تقديم حلول متكاملة لإدارة الفنادق، تشغيل الفنادق، والتسويق الرقمي لزيادة الإيرادات ورفع معدلات الإشغال.",
     "about.title": "من نحن",
     "about.description1":
       "تارجت للتسويق الفندقي هي شركة متخصصة في تقديم حلول متكاملة لإدارة وتشغيل وتسويق الفنادق. نجمع بين الخبرة التشغيلية والتسويق الرقمي المتطور لمساعدة الفنادق على تحقيق أهدافها.",
     "about.readMore": "اقرأ المزيد",
+    "about.story.title": "قصتنا",
+    "about.story.description":
+      "تأسست شركة تارجت للتسويق الفندقي بهدف تقديم حلول متكاملة واحترافية في إدارة الفنادق، تشغيل الفنادق، وتسويق الفنادق الرقمي. نحن نؤمن أن النجاح الحقيقي في صناعة الضيافة والسياحة يعتمد على الجمع بين الخبرة التشغيلية العميقة واستراتيجيات التسويق الرقمي المبتكرة والفعالة. نعمل مع مجموعة واسعة ومتنوعة من الفنادق والمنتجعات في مصر والمنطقة العربية، ونقدم لكل عميل استراتيجيات مخصصة تساعده على زيادة الإيرادات، رفع معدلات الإشغال، تعزيز الحجوزات المباشرة، وبناء علامة تجارية قوية في سوق السياحة التنافسي.",
+    "about.vision.title": "رؤيتنا",
+    "about.vision.description":
+      "أن نكون الشريك الأول والموثوق للفنادق والمنتجعات في المنطقة العربية، من خلال تقديم حلول مبتكرة في إدارة الفنادق، تشغيل الفنادق، وتسويق الفنادق الرقمي، لتحقيق نتائج استثنائية، زيادة الإيرادات، ورفع معدلات الإشغال باستمرار.",
 
+    "about.mission.title": "مهمتنا",
+    "about.mission.description":
+      "تمكين الفنادق والمنتجعات من تحقيق أقصى إمكاناتها من خلال الجمع بين الخبرة التشغيلية العميقة واستراتيجيات التسويق الرقمي المتطورة، مع التركيز على زيادة الإيرادات، رفع معدلات الإشغال، وتحقيق نتائج قابلة للقياس والاستمرارية.",
     // Services Section
     "services.title": "خدماتنا",
     "services.subtitle": "Our Services",
@@ -160,11 +173,23 @@ const translations = {
       "We provide comprehensive hotel management, operations, and marketing services with professional solutions designed to boost performance, increase revenue, and maximize occupancy rates.",
 
     // About Section
+    "about.meta.title":
+      "About Us | Target Hotel Marketing - Professional Hotel Management & Marketing",
+    "about.meta.description":
+      "Discover Target Hotel Marketing, your trusted partner for comprehensive hotel management, operations, and digital marketing solutions designed to increase revenue, boost occupancy, and drive direct bookings.",
     "about.title": "About Us",
     "about.description1":
       "Target Hotel Marketing specializes in comprehensive solutions for hotel management, operation, and marketing, combining operational expertise with advanced digital marketing.",
     "about.readMore": "Read More",
-
+    "about.story.title": "Our Story",
+    "about.story.description":
+      "Target Hotel Marketing was established with the goal of providing comprehensive solutions for hotel management, operations, and marketing. We firmly believe that success in the hospitality industry requires a powerful blend of operational expertise and innovative digital marketing. We partner with a diverse range of hotels and resorts, delivering customized strategies that help them achieve their business objectives, increase revenue, boost occupancy rates, and strengthen their competitive position in the market.",
+    "about.vision.title": "Our Vision",
+    "about.vision.description":
+      "To be the trusted first-choice partner for hotels and resorts across the region, delivering innovative hotel management, operations, and digital marketing solutions that drive exceptional results, maximize revenue, and consistently boost occupancy rates.",
+    "about.mission.title": "Our Mission",
+    "about.mission.description":
+      "Empowering hotels and resorts to reach their full potential by combining deep operational expertise with advanced digital marketing strategies, focused on driving measurable results, increasing revenue, and maximizing occupancy rates.",
     // Services Section
     "services.title": "Our Services",
     "services.subtitle": "Our Services",
