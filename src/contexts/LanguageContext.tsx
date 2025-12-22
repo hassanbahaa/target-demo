@@ -27,7 +27,9 @@ const translations = {
     "nav.testimonials": "آراء العملاء",
     "nav.contact": "اتصل بنا",
     "nav.cta": "احجز استشارة",
-
+    // meta services data
+    "services.meta.description":
+      "نقدم خدمات متكاملة في إدارة وتشغيل وتسويق الفنادق، مع حلول احترافية لزيادة الأداء وتحقيق أفضل النتائج.",
     // Hero Section
     "hero.title": "حلول متكاملة لتسويق فندقك",
     "hero.subtitle":
@@ -68,7 +70,30 @@ const translations = {
     "services.qualityAssurance.title": "ضمان الجودة والمعايير",
     "services.qualityAssurance.description":
       "التأكد من الالتزام بأعلى معايير الجودة والسلامة في جميع العمليات",
+    //seo
+    "services.seo.title": "تحسين محركات البحث (SEO)",
+    "services.seo.description":
+      "نحسن ظهور موقعك الإلكتروني في نتائج البحث لجذب المزيد من الزوار المستهدفين وزيادة الحجوزات العضوية.",
+    "services.seo.features.keywordResearch": "تحسين الكلمات المفتاحية",
+    "services.seo.features.contentOptimization": "تحسين المحتوى",
+    "services.seo.features.linkBuilding": "بناء الروابط الخارجية",
+    "services.seo.features.performanceOptimization": "تحسين السرعة والأداء",
+    // Analyzis
+    "services.analytics.title": "التحليل والتقارير",
+    "services.analytics.description":
+      "نوفر تقارير تحليلية شاملة تساعدك على فهم أداء فندقك واتخاذ قرارات مبنية على البيانات لتحسين النتائج.",
 
+    "services.analytics.features.kpis": "تتبع مؤشرات الأداء الرئيسية (KPIs)",
+    "services.analytics.features.customerBehavior": "تحليل سلوك العملاء",
+    "services.analytics.features.revenueReports": "تقارير الإيرادات",
+    "services.analytics.features.improvementRecommendations": "توصيات للتحسين",
+    // marketing
+    "services.marketing.features.socialMedia": "إدارة وسائل التواصل الاجتماعي",
+    "services.marketing.features.paidAds":
+      "الإعلانات المدفوعة (Google Ads, Facebook Ads)",
+    "services.marketing.features.emailMarketing":
+      "التسويق عبر البريد الإلكتروني",
+    "services.marketing.features.contentMarketing": "تسويق المحتوى", // ==================================== //
     // Platforms Section
     "platforms.title": "منصات الحجز الرئيسية",
     "platforms.subtitle": "Major Booking Platforms",
@@ -129,6 +154,9 @@ const translations = {
     "hero.subtitle":
       "We help you increase bookings and improve performance through innovative marketing strategies",
     "hero.cta": "Get Started",
+    // meta data
+    "services.meta.description":
+      "We provide comprehensive hotel management, operations, and marketing services with professional solutions designed to boost performance, increase revenue, and maximize occupancy rates.",
 
     // About Section
     "about.title": "About Us",
@@ -165,7 +193,38 @@ const translations = {
       "Quality Assurance and Standards Compliance",
     "services.qualityAssurance.description":
       "Ensuring full compliance with the highest international quality and safety standards across all operations",
+    //seo
+    "services.seo.title": "Hotel SEO Optimization",
+    "services.seo.description":
+      "We enhance your hotel website's search engine visibility to attract more targeted traffic, boost organic rankings, and increase direct bookings.",
 
+    "services.seo.features.keywordResearch": "Keyword Research & Optimization",
+    "services.seo.features.contentOptimization": "On-Page Content Optimization",
+    "services.seo.features.linkBuilding": "Strategic Link Building",
+    "services.seo.features.performanceOptimization":
+      "Site Speed & Technical Performance Improvements",
+    // Analyzis
+    "services.analytics.title": "Hotel Performance Analytics & Reporting",
+    "services.analytics.description":
+      "We deliver comprehensive analytics and detailed reports to give you deep insights into your hotel's performance, enabling data-driven decisions that boost occupancy, revenue, and profitability.",
+
+    "services.analytics.features.kpis":
+      "Tracking Key Performance Indicators (KPIs)",
+    "services.analytics.features.customerBehavior":
+      "Guest Behavior & Segmentation Analysis",
+    "services.analytics.features.revenueReports":
+      "Detailed Revenue & Financial Reports",
+    "services.analytics.features.improvementRecommendations":
+      "Actionable Recommendations for Optimization",
+
+    // marketing
+    "services.marketing.features.socialMedia": "Social Media Management",
+    "services.marketing.features.paidAds":
+      "Paid Advertising (Google Ads & Meta Ads)",
+    "services.marketing.features.emailMarketing": "Email Marketing Campaigns",
+    "services.marketing.features.contentMarketing":
+      "Content Marketing & Blog Strategy",
+    // ==================================== //
     // Platforms Section
     "platforms.title": "Major Booking Platforms",
     "platforms.subtitle": "Major Booking Platforms",

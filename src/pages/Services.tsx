@@ -33,32 +33,24 @@ const Services = () => {
     },
     {
       icon: Search,
-      titleAr: "تحسين محركات البحث (SEO)",
-      titleEn: "SEO Optimization",
-      descriptionAr:
-        "نحسن ظهور موقعك الإلكتروني في نتائج البحث لجذب المزيد من الزوار المستهدفين وزيادة الحجوزات العضوية.",
-      descriptionEn:
-        "We optimize your website's visibility in search results to attract more targeted visitors and increase organic bookings.",
+      title: t("services.seo.title"),
+      description: t("services.seo.description"),
       features: [
-        "تحسين الكلمات المفتاحية",
-        "تحسين المحتوى",
-        "بناء الروابط الخارجية",
-        "تحسين السرعة والأداء",
+        t("services.seo.features.keywordResearch"),
+        t("services.seo.features.contentOptimization"),
+        t("services.seo.features.linkBuilding"),
+        t("services.seo.features.performanceOptimization"),
       ],
     },
     {
       icon: BarChart,
-      titleAr: "التحليل والتقارير",
-      titleEn: "Performance Analytics",
-      descriptionAr:
-        "نوفر تقارير تحليلية شاملة تساعدك على فهم أداء فندقك واتخاذ قرارات مبنية على البيانات لتحسين النتائج.",
-      descriptionEn:
-        "We provide comprehensive analytical reports that help you understand your hotel's performance and make data-driven decisions to improve results.",
+      title: t("services.analytics.title"),
+      description: t("services.analytics.description"),
       features: [
-        "تتبع مؤشرات الأداء الرئيسية (KPIs)",
-        "تحليل سلوك العملاء",
-        "تقارير الإيرادات",
-        "توصيات للتحسين",
+        t("services.analytics.features.kpis"),
+        t("services.analytics.features.customerBehavior"),
+        t("services.analytics.features.revenueReports"),
+        t("services.analytics.features.improvementRecommendations"),
       ],
     },
   ];
@@ -68,10 +60,7 @@ const Services = () => {
       {/* SEO */}
       <Helmet>
         <title dir={isRTL ? "rtl" : "ltr"}> {t("nav.services")}</title>
-        <meta
-          name="description"
-          content="نقدم خدمات متكاملة في إدارة وتشغيل وتسويق الفنادق، مع حلول احترافية لزيادة الأداء وتحقيق أفضل النتائج."
-        />
+        <meta name="description" content={t("services.meta.description")} />
       </Helmet>
 
       <Header />
@@ -81,9 +70,8 @@ const Services = () => {
         <section className="section-padding bg-gradient-to-br from-primary/10 to-primary/5">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4" dir="rtl">
-              خدماتنا
+              {t("services.title")}
             </h1>
-            <p className="text-xl text-muted-foreground">Our Services</p>
             <p
               className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto"
               dir="rtl"
@@ -105,21 +93,15 @@ const Services = () => {
                     </div>
                     <div className="flex-1">
                       <CardTitle className="text-2xl mb-2" dir="rtl">
-                        {service.titleAr}
+                        {service.title}
                       </CardTitle>
-                      <p className="text-lg text-muted-foreground">
-                        {service.titleEn}
-                      </p>
                     </div>
                   </div>
                 </CardHeader>
 
                 <CardContent>
                   <p className="text-muted-foreground mb-4" dir="rtl">
-                    {service.descriptionAr}
-                  </p>
-                  <p className="text-muted-foreground mb-6">
-                    {service.descriptionEn}
+                    {service.description}
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-3">
