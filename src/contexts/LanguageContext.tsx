@@ -93,7 +93,8 @@ const translations = {
       "الإعلانات المدفوعة (Google Ads, Facebook Ads)",
     "services.marketing.features.emailMarketing":
       "التسويق عبر البريد الإلكتروني",
-    "services.marketing.features.contentMarketing": "تسويق المحتوى", // ==================================== //
+    "services.marketing.features.contentMarketing": "تسويق المحتوى",
+    // ==================================== //
     // Platforms Section
     "platforms.title": "منصات الحجز الرئيسية",
     "platforms.subtitle": "Major Booking Platforms",

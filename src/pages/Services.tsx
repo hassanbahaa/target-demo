@@ -25,10 +25,10 @@ const Services = () => {
       title: t("services.marketing.title"),
       description: t("services.marketing.description"),
       features: [
-        "إدارة وسائل التواصل الاجتماعي",
-        "الإعلانات المدفوعة (Google Ads, Facebook Ads)",
-        "التسويق عبر البريد الإلكتروني",
-        "تسويق المحتوى",
+        t("services.marketing.features.socialMedia"),
+        t("services.marketing.features.paidAds"),
+        t("services.marketing.features.emailMarketing"),
+        t("services.marketing.features.contentMarketing"),
       ],
     },
     {
@@ -69,12 +69,15 @@ const Services = () => {
         {/* Hero Banner */}
         <section className="section-padding bg-gradient-to-br from-primary/10 to-primary/5">
           <div className="container-custom text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4" dir="rtl">
+            <h1
+              className="text-4xl md:text-5xl font-bold mb-4"
+              dir={isRTL ? "rtl" : "ltr"}
+            >
               {t("services.title")}
             </h1>
             <p
               className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto"
-              dir="rtl"
+              dir={isRTL ? "rtl" : "ltr"}
             >
               {t("services.p")}
             </p>
@@ -92,7 +95,10 @@ const Services = () => {
                       <service.icon className="w-8 h-8 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-2xl mb-2" dir="rtl">
+                      <CardTitle
+                        className="text-2xl mb-2"
+                        dir={isRTL ? "rtl" : "ltr"}
+                      >
                         {service.title}
                       </CardTitle>
                     </div>
@@ -100,7 +106,10 @@ const Services = () => {
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-muted-foreground mb-4" dir="rtl">
+                  <p
+                    className="text-muted-foreground mb-4"
+                    dir={isRTL ? "rtl" : "ltr"}
+                  >
                     {service.description}
                   </p>
 
@@ -108,7 +117,7 @@ const Services = () => {
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-primary" />
-                        <span className="text-sm" dir="rtl">
+                        <span className="text-sm" dir={isRTL ? "rtl" : "ltr"}>
                           {feature}
                         </span>
                       </div>
