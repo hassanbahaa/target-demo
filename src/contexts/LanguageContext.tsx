@@ -43,6 +43,8 @@ const translations = {
     // Services Section
     "services.title": "خدماتنا",
     "services.subtitle": "Our Services",
+    "services.p":
+      "نقدم مجموعة شاملة ومتخصصة من خدمات إدارة الفنادق وتشغيل الفنادق وتسويق الفنادق الاحترافي، لمساعدتك في زيادة الإشغال والإيرادات وتحقيق أهدافك التجارية بنجاح.",
     "services.management.title": "إدارة وتشغيل الفنادق",
     "services.management.description":
       "نقدم خدمات إدارة وتشغيل شاملة لجميع جوانب العمل الفندقي",
@@ -53,6 +55,19 @@ const translations = {
     "services.performance.description":
       "تحليلات متقدمة وتقارير شاملة لتحسين الأداء",
     "services.viewAll": "عرض جميع الخدمات",
+    // Services Fuetures
+    "services.staffManagement.title": "إدارة الموظفين والتدريب",
+    "services.staffManagement.description":
+      "تدريب وإدارة فريق العمل بكفاءة عالية لضمان خدمة متميزة",
+    "services.guestExperience.title": "تحسين تجربة النزلاء",
+    "services.guestExperience.description":
+      "استراتيجيات مبتكرة لرفع رضا النزلاء وزيادة التقييمات الإيجابية",
+    "services.inventoryManagement.title": "إدارة المخزون والمشتريات",
+    "services.inventoryManagement.description":
+      "تحسين إدارة المخزون وتقليل التكاليف من خلال عمليات مشتريات ذكية",
+    "services.qualityAssurance.title": "ضمان الجودة والمعايير",
+    "services.qualityAssurance.description":
+      "التأكد من الالتزام بأعلى معايير الجودة والسلامة في جميع العمليات",
 
     // Platforms Section
     "platforms.title": "منصات الحجز الرئيسية",
@@ -124,6 +139,8 @@ const translations = {
     // Services Section
     "services.title": "Our Services",
     "services.subtitle": "Our Services",
+    "services.p":
+      "We provide a comprehensive suite of specialized hotel management services, including expert hotel operations and strategic hotel marketing, designed to help you maximize revenue and achieve your business objectives.",
     "services.management.title": "Hotel Management & Operations",
     "services.management.description":
       "Comprehensive hotel management and operation services",
@@ -134,6 +151,20 @@ const translations = {
     "services.performance.description":
       "Advanced analytics and comprehensive reports",
     "services.viewAll": "View All Services",
+    // Services Fuetures
+    "services.staffManagement.title": "Staff Management and Training",
+    "services.staffManagement.description":
+      "Professional staff management and comprehensive training programs to ensure exceptional service quality",
+    "services.guestExperience.title": "Enhancing Guest Experience",
+    "services.guestExperience.description":
+      "Innovative strategies to boost guest satisfaction, increase positive reviews, and build loyalty",
+    "services.inventoryManagement.title": "Inventory and Purchasing Management",
+    "services.inventoryManagement.description":
+      "Optimized inventory control and smart procurement processes to reduce costs and improve efficiency",
+    "services.qualityAssurance.title":
+      "Quality Assurance and Standards Compliance",
+    "services.qualityAssurance.description":
+      "Ensuring full compliance with the highest international quality and safety standards across all operations",
 
     // Platforms Section
     "platforms.title": "Major Booking Platforms",

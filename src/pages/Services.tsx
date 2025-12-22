@@ -11,27 +11,19 @@ const Services = () => {
   const services = [
     {
       icon: Hotel,
-      titleAr: "إدارة وتشغيل الفنادق",
-      titleEn: "Hotel Operation Management",
-      descriptionAr:
-        "نقدم خدمات إدارة وتشغيل شاملة تغطي جميع جوانب العمل الفندقي، من إدارة الموظفين إلى تحسين تجربة النزلاء وزيادة الكفاءة التشغيلية.",
-      descriptionEn:
-        "We provide comprehensive hotel management and operation services covering all aspects of hotel operations, from staff management to enhancing guest experience and improving operational efficiency.",
+      title: t("services.management.title"),
+      description: t("services.management.description"),
       features: [
-        "إدارة الموظفين والتدريب",
-        "تحسين تجربة النزلاء",
-        "إدارة المخزون والمشتريات",
-        "ضمان الجودة والمعايير",
+        t("services.staffManagement.title"),
+        t("services.guestExperience.title"),
+        t("services.inventoryManagement.title"),
+        t("services.qualityAssurance.title"),
       ],
     },
     {
       icon: TrendingUp,
-      titleAr: "التسويق الرقمي",
-      titleEn: "Digital Marketing Campaigns",
-      descriptionAr:
-        "نطور استراتيجيات تسويق رقمي مخصصة تستهدف جمهورك المثالي وتزيد من حجوزاتك المباشرة عبر منصات متعددة.",
-      descriptionEn:
-        "We develop customized digital marketing strategies that target your ideal audience and increase your direct bookings across multiple platforms.",
+      title: t("services.marketing.title"),
+      description: t("services.marketing.description"),
       features: [
         "إدارة وسائل التواصل الاجتماعي",
         "الإعلانات المدفوعة (Google Ads, Facebook Ads)",
@@ -96,8 +88,7 @@ const Services = () => {
               className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto"
               dir="rtl"
             >
-              نقدم مجموعة شاملة من الخدمات المتخصصة في إدارة وتشغيل وتسويق
-              الفنادق لمساعدتك على تحقيق أهدافك التجارية
+              {t("services.p")}
             </p>
           </div>
         </section>
