@@ -4,8 +4,10 @@ import CTABanner from "@/components/CTABanner";
 import { Hotel, TrendingUp, Search, BarChart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 const Services = () => {
+  const { t, language } = useLanguage();
+  const isRTL = language === "ar";
   const services = [
     {
       icon: Hotel,
@@ -73,7 +75,7 @@ const Services = () => {
     <div className="min-h-screen">
       {/* SEO */}
       <Helmet>
-        <title>خدماتنا | اسم الموقع</title>
+        <title dir={isRTL ? "rtl" : "ltr"}> {t("nav.services")}</title>
         <meta
           name="description"
           content="نقدم خدمات متكاملة في إدارة وتشغيل وتسويق الفنادق، مع حلول احترافية لزيادة الأداء وتحقيق أفضل النتائج."

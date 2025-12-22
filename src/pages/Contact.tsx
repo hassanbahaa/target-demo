@@ -8,7 +8,7 @@ const Contact = () => {
     <div className="min-h-screen">
       {/* SEO */}
       <Helmet>
-        <title>تواصل معنا | اسم الموقع</title>
+        <title>تواصل معنا | تارجت للتسويق الفندقي</title>
         <meta
           name="description"
           content="تواصل معنا للاستفسار عن خدمات إدارة وتشغيل وتسويق الفنادق، فريقنا جاهز لمساعدتك والإجابة على جميع أسئلتك."
