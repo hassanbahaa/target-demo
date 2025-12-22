@@ -11,36 +11,76 @@ const ContactSection = () => {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "شكراً لتواصلك معنا!",
-      description: "سنقوم بالرد عليك في أقرب وقت ممكن.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/5107d79cb4fa9d0f8d142ca25b46e6df",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+            _subject: "رسالة جديدة من موقع Target Hotel Marketing",
+            _template: "table",
+            _captcha: "false",
+          }),
+        }
+      );
+
+      if (response.ok) {
+        toast({
+          title: "✅ تم الإرسال بنجاح",
+          description: "شكرًا لتواصلك معنا! سنرد عليك في أقرب وقت ممكن.",
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast({
+          title: "حدث خطأ أثناء الإرسال 😕",
+          description: "يرجى المحاولة مرة أخرى لاحقًا.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "حدث خطأ في الاتصال 😕",
+        description: "تأكد من اتصال الإنترنت وحاول مجددًا.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" dir="rtl">
+          <h2
+            className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+            dir="rtl"
+          >
             تواصل معنا
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Contact Us
-          </p>
+          <p className="text-muted-foreground text-lg">Contact Us</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -49,7 +89,10 @@ const ContactSection = () => {
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground" dir="rtl">
+                  <label
+                    className="block text-sm font-medium mb-2 text-foreground"
+                    dir="rtl"
+                  >
                     الاسم / Name
                   </label>
                   <Input
@@ -62,8 +105,12 @@ const ContactSection = () => {
                     className="w-full"
                   />
                 </div>
+
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground" dir="rtl">
+                  <label
+                    className="block text-sm font-medium mb-2 text-foreground"
+                    dir="rtl"
+                  >
                     البريد الإلكتروني / Email
                   </label>
                   <Input
@@ -76,8 +123,12 @@ const ContactSection = () => {
                     className="w-full"
                   />
                 </div>
+
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground" dir="rtl">
+                  <label
+                    className="block text-sm font-medium mb-2 text-foreground"
+                    dir="rtl"
+                  >
                     رقم الهاتف / Phone
                   </label>
                   <Input
@@ -90,8 +141,12 @@ const ContactSection = () => {
                     className="w-full"
                   />
                 </div>
+
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground" dir="rtl">
+                  <label
+                    className="block text-sm font-medium mb-2 text-foreground"
+                    dir="rtl"
+                  >
                     الرسالة / Message
                   </label>
                   <Textarea
@@ -103,6 +158,7 @@ const ContactSection = () => {
                     className="w-full min-h-32"
                   />
                 </div>
+
                 <Button type="submit" className="btn-primary w-full">
                   إرسال / Send
                 </Button>
@@ -122,7 +178,10 @@ const ContactSection = () => {
                     البريد الإلكتروني
                   </h3>
                   <p className="text-muted-foreground">Email</p>
-                  <a href="mailto:targethotelmarketing@gmail.com" className="text-primary hover:underline">
+                  <a
+                    href="mailto:targethotelmarketing@gmail.com"
+                    className="text-primary hover:underline"
+                  >
                     targethotelmarketing@gmail.com
                   </a>
                 </div>
@@ -139,11 +198,17 @@ const ContactSection = () => {
                     الهاتف
                   </h3>
                   <p className="text-muted-foreground">Phone</p>
-                  <a href="tel:+966576351714" className="text-primary hover:underline">
+                  <a
+                    href="tel:+966576351714"
+                    className="text-primary hover:underline"
+                  >
                     +966 57 635 1714
                   </a>
                   <br />
-                  <a href="tel:+201091611267" className="text-primary hover:underline">                  
+                  <a
+                    href="tel:+201091611267"
+                    className="text-primary hover:underline"
+                  >
                     +20 10 916 11267
                   </a>
                 </div>
@@ -163,15 +228,16 @@ const ContactSection = () => {
                   <p className="text-foreground" dir="rtl">
                     القاهرة, جمهورية مصر العربية
                   </p>
-                  <p className="text-sm text-muted-foreground">
-                    Cairo, Egypt
-                  </p>
+                  <p className="text-sm text-muted-foreground">Cairo, Egypt</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-primary/5 p-6 rounded-lg border border-primary/20">
-              <h3 className="font-semibold text-foreground mb-3 text-center" dir="rtl">
+              <h3
+                className="font-semibold text-foreground mb-3 text-center"
+                dir="rtl"
+              >
                 ساعات العمل
               </h3>
               <p className="text-sm text-muted-foreground text-center mb-2">

@@ -111,10 +111,16 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Poppins', 'Tajawal', sans-serif;
+    transition: all 0.3s ease-in-out;
   }
   
   [dir="rtl"] {
     font-family: 'Tajawal', 'Poppins', sans-serif;
+  }
+
+  /* Smooth language switch animation */
+  * {
+    transition: font-family 0.3s ease-in-out;
   }
 }
 

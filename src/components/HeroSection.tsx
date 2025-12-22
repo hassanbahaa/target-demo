@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-hotel.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t, language } = useLanguage();
+  const isRTL = language === "ar";
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -24,18 +28,18 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="container-custom relative z-10 text-center text-white">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" dir="rtl">
-          نقود فنادقك نحو النجاح التسويقي والتشغيلي
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" dir={isRTL ? "rtl" : "ltr"}>
+          {t('hero.title')}
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto" dir="rtl">
-          حلول متكاملة لإدارة وتشغيل وتسويق الفنادق
+        <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto" dir={isRTL ? "rtl" : "ltr"}>
+          {t('hero.subtitle')}
         </p>
         <Button 
           onClick={() => scrollToSection('services')}
           size="lg"
           className="btn-primary text-lg px-8 py-6"
         >
-          ابدأ الآن
+          {t('hero.cta')}
         </Button>
       </div>
 

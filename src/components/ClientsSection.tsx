@@ -3,26 +3,25 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { hotels } from "@/data/hotels";
 import AutoScroll from "embla-carousel-auto-scroll";
+// أول السطر داخل الملف (فوق الكومبوننت)
 
-const clients = [
-  { name: "Golden Palm Hotel", logo: "/placeholder.svg" },
-  { name: "Blue Sea Resort", logo: "/placeholder.svg" },
-  { name: "Royal Crown Hotel", logo: "/placeholder.svg" },
-  { name: "Diamond Suite Hotel", logo: "/placeholder.svg" },
-  { name: "Pearl Beach Resort", logo: "/placeholder.svg" },
-  { name: "Oasis Grand Hotel", logo: "/placeholder.svg" },
-];
+
+
 
 const ClientsSection = () => {
+  const { t } = useLanguage();
+
   return (
-    <section className="section-padding">
+    <section className="section-padding" dir="ltr">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" dir="rtl">
-            عملاؤنا
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t('clients.title')}
           </h2>
-          <p className="text-xl text-muted-foreground">Our Clients</p>
+          <p className="text-xl text-muted-foreground">{t('clients.subtitle')}</p>
         </div>
 
         <Carousel
@@ -33,7 +32,7 @@ const ClientsSection = () => {
           plugins={[
             AutoScroll({
               playOnInit: true,
-              speed: 0.8,
+              speed: 1,
               stopOnInteraction: false,
               stopOnMouseEnter: true,
             }),
@@ -41,18 +40,28 @@ const ClientsSection = () => {
           className="w-full"
         >
           <CarouselContent className="-ml-4">
-            {[...clients, ...clients].map((client, index) => (
+            {[...hotels, ...hotels].map((hotel, index) => (
               <CarouselItem
-                key={`${client.name}-${index}`}
-                className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/5"
+                key={`${hotel.id}-${index}`}
+                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4"
               >
                 <div className="flex items-center justify-center p-4">
-                  <div className="client-card group overflow-hidden">
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="flex flex-col items-center text-center group transition-all">
+                    <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto overflow-hidden rounded-xl shadow-md">
+                        <img
+                          src={`/hotels/${hotel.id}.jpg`}
+                          alt={hotel.name}
+                          className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                        />
+                    </div>
+                    <h3 className="text-base font-semibold mt-3 break-words px-2">
+                      {hotel.name}
+                    </h3>
+<p className="text-sm text-gray-500 text-center emoji-font">
+  {hotel.city} {(hotel.flag)}
+</p>
+
+
                   </div>
                 </div>
               </CarouselItem>

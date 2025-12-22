@@ -1,10 +1,17 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ImageLightbox from "@/components/ImageLightbox";
 import lavina from '../assets/Testimonials/lavina.jpg';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Testimonials = () => {
+  const { t, language } = useLanguage();
+  const isRTL = language === "ar";
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
   const testimonials = [
     {
       textAr: "بكل الود نهنئكم و نهنئ انفسنا بنجاح اول تعاون بيننا و نبارك جهودكم المثمرة خلف ذلك و عملكم بروح الفريق الواحد مما كلل جهود الجميع للوصول إلى ما نحن عليه اذ نأمل مواصلة جهودكم الكريمة للاستمرار و للأفضل ان شاء الله.",
@@ -49,8 +56,8 @@ const Testimonials = () => {
     {
       textAr: "لكم منا كل الاحترام و التقدير على الجهود المبذول في التسويق و تقدم سير العمل و حسن التعامل مع المنشأة و مع العملاء .",
       textEn: "You have our utmost respect and appreciation for your dedicated efforts in marketing, the progress of operations, and your excellent professionalism in dealing with both the establishment and the clients.",
-      author: "المدير",
-      authorEn: "Manager",
+      author: "محمد مصطفى",
+      authorEn: "Mohamed Mostafa",
       hotel: "فندق أمواج الجبيل",
       rating: 5
     }
@@ -59,14 +66,14 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="pt-16">{/* Add padding to prevent header overlap */}
         {/* Hero Banner */}
         <section className="section-padding bg-gradient-to-br from-primary/10 to-primary/5">
           <div className="container-custom text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4" dir="rtl">آراء عملائنا</h1>
-            <p className="text-xl text-muted-foreground">Client Testimonials</p>
-            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto" dir="rtl">
-              اكتشف ما يقوله عملاؤنا عن تجربتهم معنا
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('testimonials.title')}</h1>
+            <p className="text-xl text-muted-foreground">{t('testimonials.subtitle')}</p>
+            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+              {t('testimonials.discover')}
             </p>
           </div>
         </section>
@@ -101,30 +108,36 @@ const Testimonials = () => {
 
             {/* Appreciation Letter Section */}
             <Card className="mt-12 card-hover">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4" dir="rtl">
-                  خطابات شكر وتقدير رسمية
+              <CardContent className="p-8 text-center" dir={isRTL ? "rtl" : "ltr"}>
+                <h3 className="text-2xl font-bold mb-4">
+                  {t('testimonials.letterTitle')}
                 </h3>
-                <p className="text-muted-foreground mb-6" dir="rtl">
-                  نحتفظ بمجموعة من خطابات الشكر والتقدير الرسمية من عملائنا، وهي متاحة للاطلاع عند الطلب.
-                </p>
-                <p className="text-sm text-muted-foreground italic">
-                  Official letters of appreciation from our clients are available upon request.
+                <p className="text-muted-foreground mb-6">
+                  {t('testimonials.letterDescription')}
                 </p>
                 <div className="mt-6 p-8 bg-muted/50 rounded-lg">
                   <img 
                     src={lavina}
                     alt="Sample Appreciation Letter"
-                    className="max-w-md mx-auto rounded shadow-lg"
+                    className="max-w-full md:max-w-md mx-auto rounded shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                    onClick={() => setLightboxOpen(true)}
                   />
                   <p className="text-sm text-muted-foreground mt-4">
-                    Sample appreciation letter from hotel partner
+                    {t('testimonials.sampleLetter')}
                   </p>
                 </div>
               </CardContent>
             </Card>
           </div>
         </section>
+
+        {/* Lightbox */}
+        <ImageLightbox
+          src={lavina}
+          alt="Appreciation Letter"
+          isOpen={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+        />
       </main>
       <Footer />
     </div>

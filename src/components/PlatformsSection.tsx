@@ -3,6 +3,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import bookingLogo from '../assets/websites/booking.png';
 import agodaLogo from '../assets/websites/agoda.png';
@@ -29,15 +30,17 @@ const platforms = [
 ];
 
 const PlatformsSection = () => {
+  const { t } = useLanguage();
+
   return (
-    <section className="section-padding bg-muted/30">
+    <section className="section-padding bg-muted/30" dir="ltr">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" dir="rtl">
-            المنصات التي نعمل عليها
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t('platforms.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Platforms We Work With
+            {t('platforms.subtitle')}
           </p>
         </div>
 
