@@ -184,6 +184,13 @@ const ContactSection = () => {
                   >
                     targethotelmarketing@gmail.com
                   </a>
+                  <br></br>
+                  <a
+                    href="mailto:info@targethotelmarketing.com"
+                    className="text-primary hover:underline"
+                  >
+                    info@targethotelmarketing.com
+                  </a>
                 </div>
               </div>
             </div>
