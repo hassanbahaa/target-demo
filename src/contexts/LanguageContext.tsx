@@ -128,6 +128,38 @@ const translations = {
       "نحتفظ بمجموعة من خطابات الشكر والتقدير الرسمية من عملائنا، وهي متاحة للاطلاع عند الطلب.",
     "testimonials.sampleLetter":
       "Sample appreciation letter from hotel partner",
+    "testimonials.meta.title": "آراء عملائنا | تارجت للتسويق الفندقي",
+
+    "testimonials.meta.description":
+      "اطّلع على آراء وتجارب عملائنا في تارجت للتسويق الفندقي، واكتشف كيف ساعدنا الفنادق على زيادة الحجوزات وتحسين الأداء وتحقيق نتائج حقيقية.",
+
+    // reviews
+    "testimonials.reviews.r1":
+      "بكل الود نهنئكم و نهنئ انفسنا بنجاح اول تعاون بيننا و نبارك جهودكم المثمرة خلف ذلك و عملكم بروح الفريق الواحد مما كلل جهود الجميع للوصول إلى ما نحن عليه اذ نأمل مواصلة جهودكم الكريمة للاستمرار و للأفضل ان شاء الله.",
+    "testimonials.reviews.r1.author": "عبدربه إبراهيم الشيخي",
+    "testimonials.reviews.r1.hotel": "مؤسسة دار لافينا",
+
+    "testimonials.reviews.r2":
+      "من افضل المؤسسات التي عملت معها, احترافية عالية في العمل و كذلك سرعة الاستجابة و التعاون و كذلك يتميزون بتنوع تسويق المنشأة على برامج متعددة لكسب عدد اكبر من النزلاء.",
+    "testimonials.reviews.r2.author": "سلطان بن سعيد آل عون",
+    "testimonials.reviews.r2.hotel": "فندق كيان للاجنحة الفندقية ابها",
+
+    "testimonials.reviews.r3":
+      "شركة ممتازة و تقدم خدمات افضل, انصح بهم و بشدة اعمل معهم منذ 3 سنوات و الحمد لله.",
+    "testimonials.reviews.r3.author": "هاني عبد المحسن العمري",
+    "testimonials.reviews.r3.hotel": "فندق كيان للاجنحة الفندقية جدة",
+    "testimonials.reviews.r4":
+      "ادارة ناجحة و عمل جماعي على اعلى مستوى, كنتم اضافة قوية لنا في زيادة المبيعات و جلب عدد كبير من العملاء الجدد.",
+    "testimonials.reviews.r4.author": "احمد عبد الستار",
+    "testimonials.reviews.r4.hotel": "جراند خيال جدة",
+    "testimonials.reviews.r5":
+      "تعتبر من افضل الشركات في التسويق من خلال متابعتهم للعمل و حسن التعامل مع العملاء و لازلنا مستمرين بالتعاون معهم.",
+    "testimonials.reviews.r5.author": "محمد محسن الوادعي",
+    "testimonials.reviews.r5.hotel": "فندق قصر الممشى",
+    "testimonials.reviews.r6":
+      "لكم منا كل الاحترام و التقدير على الجهود المبذول في التسويق و تقدم سير العمل و حسن التعامل مع المنشأة و مع العملاء .",
+    "testimonials.reviews.r6.author": "محمد مصطفى",
+    "testimonials.reviews.r6.hotel": "فندق أمواج الجبيل",
 
     // CTA Section
     "cta.title": "ابدأ شراكتك معنا اليوم",
@@ -272,7 +304,38 @@ const translations = {
       "Official letters of appreciation from our clients are available upon request.",
     "testimonials.sampleLetter":
       "Sample appreciation letter from hotel partner",
+    // Testimonials SEO
+    "testimonials.meta.title": "Client Testimonials | Target Hotel Marketing",
 
+    "testimonials.meta.description":
+      "Read real client testimonials and success stories from hotels that partnered with Target Hotel Marketing to increase bookings and improve performance.",
+
+    "testimonials.reviews.r1":
+      "With all sincerity, we congratulate you — and ourselves — on the success of our first collaboration. We truly appreciate your fruitful efforts and your spirit of teamwork, which have led us all to this achievement. We look forward to your continued dedication and to achieving even greater success, God willing.",
+    "testimonials.reviews.r1.author": "Abdur-Rabbuh Ibrahim Al-Sheikhi",
+    "testimonials.reviews.r1.hotel": "Foundation house Lavina",
+
+    "testimonials.reviews.r2":
+      "One of the best organizations I have worked with — highly professional, responsive, and cooperative. They also excel in diversifying the property's marketing across multiple platforms to attract a larger number of guests.",
+    "testimonials.reviews.r2.author": "Sultan Bin Saeed Al-Aoun",
+    "testimonials.reviews.r2.hotel": "Kyan Hotel Suites Abha",
+
+    "testimonials.reviews.r3":
+      "An excellent company that provides outstanding services. I highly recommend them — I've been working with them for three years, and thank God, the experience has been great.",
+    "testimonials.reviews.r3.author": "Hani Abdulmohsen Al-Omari",
+    "testimonials.reviews.r3.hotel": "Kyan Hotel Suites Jeddah",
+    "testimonials.reviews.r4":
+      "Successful management and outstanding teamwork at the highest level.You were a strong addition to us in increasing sales and attracting a large number of new clients.",
+    "testimonials.reviews.r4.author": "Ahmed Abdul Sattar",
+    "testimonials.reviews.r4.hotel": "Grand Khayal Jeddah",
+    "testimonials.reviews.r5":
+      "One of the best marketing companies — distinguished by their follow-up, professionalism, and excellent customer relations.We are still continuing our collaboration with them.",
+    "testimonials.reviews.r5.author": "Mohammed Mohsen Al-Wad’i",
+    "testimonials.reviews.r5.hotel": "Qasr Al-Mamsha Hotel",
+    "testimonials.reviews.r6":
+      "You have our utmost respect and appreciation for your dedicated efforts in marketing, the progress of operations, and your excellent professionalism in dealing with both the establishment and the clients.",
+    "testimonials.reviews.r6.author": "Mohamed Mostafa",
+    "testimonials.reviews.r6.hotel": "Amwaj Aljubail Hotel",
     // CTA Section
     "cta.title": "Start Your Partnership With Us Today",
     "cta.button": "Contact Now",

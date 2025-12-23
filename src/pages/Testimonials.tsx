@@ -2,10 +2,11 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageLightbox from "@/components/ImageLightbox";
-import lavina from '../assets/Testimonials/lavina.jpg';
+import lavina from "../assets/Testimonials/lavina.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Helmet } from "react-helmet-async"; // الإمبورت الصحيح
 
 const Testimonials = () => {
   const { t, language } = useLanguage();
@@ -14,133 +15,158 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      textAr: "بكل الود نهنئكم و نهنئ انفسنا بنجاح اول تعاون بيننا و نبارك جهودكم المثمرة خلف ذلك و عملكم بروح الفريق الواحد مما كلل جهود الجميع للوصول إلى ما نحن عليه اذ نأمل مواصلة جهودكم الكريمة للاستمرار و للأفضل ان شاء الله.",
-      textEn: "With all sincerity, we congratulate you — and ourselves — on the success of our first collaboration. We truly appreciate your fruitful efforts and your spirit of teamwork, which have led us all to this achievement. We look forward to your continued dedication and to achieving even greater success, God willing.",
-      author: "عبدربه إبراهيم الشيخي",
-      authorEn: "Abdur-Rabbuh Ibrahim Al-Sheikhi",
-      hotel: "مؤسسة دار لافينا",
-      rating: 5
+      text: t("testimonials.reviews.r1"),
+      author: t("testimonials.reviews.r1.author"),
+      hotel: t("testimonials.reviews.r1.hotel"),
+      rating: 5,
     },
     {
-      textAr: "من افضل المؤسسات التي عملت معها, احترافية عالية في العمل و كذلك سرعة الاستجابة و التعاون و كذلك يتميزون بتنوع تسويق المنشأة على برامج متعددة لكسب عدد اكبر من النزلاء.",
-      textEn: "One of the best organizations I have worked with — highly professional, responsive, and cooperative. They also excel in diversifying the property's marketing across multiple platforms to attract a larger number of guests.",
-      author: "سلطان بن سعيد آل عون",
-      authorEn: "Sultan Bin Saeed Al-Aoun",
-      hotel: "فندق كيان للاجنحة الفندقية ابها",
-      rating: 5
+      text: t("testimonials.reviews.r2"),
+      author: t("testimonials.reviews.r2.author"),
+      hotel: t("testimonials.reviews.r2.hotel"),
+      rating: 5,
     },
     {
-      textAr: "شركة ممتازة و تقدم خدمات افضل, انصح بهم و بشدة اعمل معهم منذ 3 سنوات و الحمد لله.",
-      textEn: "An excellent company that provides outstanding services. I highly recommend them — I've been working with them for three years, and thank God, the experience has been great.",
-      author: "هاني عبد المحسن العمري",
-      authorEn: "Hani Abdulmohsen Al-Omari",
-      hotel: "فندق كيان للاجنحة الفندقية جدة",
-      rating: 5
+      text: t("testimonials.reviews.r3"),
+      author: t("testimonials.reviews.r3.author"),
+      hotel: t("testimonials.reviews.r3.hotel"),
+      rating: 5,
     },
     {
-      textAr: "ادارة ناجحة و عمل جماعي على اعلى مستوى, كنتم اضافة قوية لنا في زيادة المبيعات و جلب عدد كبير من العملاء الجدد.",
-      textEn: "Successful management and outstanding teamwork at the highest level.You were a strong addition to us in increasing sales and attracting a large number of new clients.",
-      author: "احمد عبد الستار",
-      authorEn: "Ahmed Abdul Sattar",
-      hotel: "جراند خيال جدة",
-      rating: 5
+      text: t("testimonials.reviews.r4"),
+      author: t("testimonials.reviews.r4.author"),
+      hotel: t("testimonials.reviews.r4.hotel"),
+      rating: 5,
     },
     {
-      textAr: "تعتبر من افضل الشركات في التسويق من خلال متابعتهم للعمل و حسن التعامل مع العملاء و لازلنا مستمرين بالتعاون معهم.",
-      textEn: "One of the best marketing companies — distinguished by their follow-up, professionalism, and excellent customer relations.We are still continuing our collaboration with them.",
-      author: "محمد محسن الوادعي",
-      authorEn: "Mohammed Mohsen Al-Wad’i",
-      hotel: "فندق قصر الممشى",
-      rating: 5
+      text: t("testimonials.reviews.r5"),
+      author: t("testimonials.reviews.r5.author"),
+      hotel: t("testimonials.reviews.r5.hotel"),
+      rating: 5,
     },
     {
-      textAr: "لكم منا كل الاحترام و التقدير على الجهود المبذول في التسويق و تقدم سير العمل و حسن التعامل مع المنشأة و مع العملاء .",
-      textEn: "You have our utmost respect and appreciation for your dedicated efforts in marketing, the progress of operations, and your excellent professionalism in dealing with both the establishment and the clients.",
-      author: "محمد مصطفى",
-      authorEn: "Mohamed Mostafa",
-      hotel: "فندق أمواج الجبيل",
-      rating: 5
-    }
+      text: t("testimonials.reviews.r6"),
+      author: t("testimonials.reviews.r6.author"),
+      hotel: t("testimonials.reviews.r6.hotel"),
+      rating: 5,
+    },
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="pt-16">{/* Add padding to prevent header overlap */}
-        {/* Hero Banner */}
-        <section className="section-padding bg-gradient-to-br from-primary/10 to-primary/5">
-          <div className="container-custom text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('testimonials.title')}</h1>
-            <p className="text-xl text-muted-foreground">{t('testimonials.subtitle')}</p>
-            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-              {t('testimonials.discover')}
-            </p>
-          </div>
-        </section>
+    <>
+      <Helmet>
+        <title>{t("testimonials.meta.title")}</title>
+        <meta name="description" content={t("testimonials.meta.description")} />
 
-        {/* Testimonials Grid */}
-        <section className="section-padding">
-          <div className="container-custom">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="card-hover">
-                  <CardContent className="p-6">
-                    <div className="flex gap-1 mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                      ))}
-                    </div>
-                    <p className="text-muted-foreground mb-4" dir="rtl">
-                      "{testimonial.textAr}"
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-4 italic">
-                      "{testimonial.textEn}"
-                    </p>
-                    <div className="border-t pt-4">
-                      <p className="font-bold" dir="rtl">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.authorEn}</p>
-                      <p className="text-sm text-primary mt-1" dir="rtl">{testimonial.hotel}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Appreciation Letter Section */}
-            <Card className="mt-12 card-hover">
-              <CardContent className="p-8 text-center" dir={isRTL ? "rtl" : "ltr"}>
-                <h3 className="text-2xl font-bold mb-4">
-                  {t('testimonials.letterTitle')}
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  {t('testimonials.letterDescription')}
-                </p>
-                <div className="mt-6 p-8 bg-muted/50 rounded-lg">
-                  <img 
-                    src={lavina}
-                    alt="Sample Appreciation Letter"
-                    className="max-w-full md:max-w-md mx-auto rounded shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
-                    onClick={() => setLightboxOpen(true)}
-                  />
-                  <p className="text-sm text-muted-foreground mt-4">
-                    {t('testimonials.sampleLetter')}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Lightbox */}
-        <ImageLightbox
-          src={lavina}
-          alt="Appreciation Letter"
-          isOpen={lightboxOpen}
-          onClose={() => setLightboxOpen(false)}
+        {/* Open Graph / Social Media Tags */}
+        <meta property="og:title" content={t("testimonials.meta.title")} />
+        <meta
+          property="og:description"
+          content={t("testimonials.meta.description")}
         />
-      </main>
-      <Footer />
-    </div>
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:locale"
+          content={language === "ar" ? "ar_AR" : "en_US"}
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:title" content={t("testimonials.meta.title")} />
+        <meta
+          name="twitter:description"
+          content={t("testimonials.meta.description")}
+        />
+      </Helmet>
+
+      <div className="min-h-screen">
+        <Header />
+        <main className="pt-16">
+          {/* Add padding to prevent header overlap */}
+          {/* Hero Banner */}
+          <section className="section-padding bg-gradient-to-br from-primary/10 to-primary/5">
+            <div className="container-custom text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                {t("testimonials.title")}
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                {t("testimonials.subtitle")}
+              </p>
+              <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+                {t("testimonials.discover")}
+              </p>
+            </div>
+          </section>
+
+          {/* Testimonials Grid */}
+          <section className="section-padding">
+            <div className="container-custom">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {testimonials.map((testimonial, index) => (
+                  <Card key={index} className="card-hover">
+                    <CardContent className="p-6">
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-5 h-5 fill-primary text-primary"
+                          />
+                        ))}
+                      </div>
+                      <p className="text-muted-foreground mb-4" dir="rtl">
+                        "{testimonial.text}"
+                      </p>
+                      <div className="border-t pt-4">
+                        <p className="font-bold" dir="rtl">
+                          {testimonial.author}
+                        </p>
+                        <p className="text-sm text-primary mt-1" dir="rtl">
+                          {testimonial.hotel}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Appreciation Letter Section */}
+              <Card className="mt-12 card-hover">
+                <CardContent
+                  className="p-8 text-center"
+                  dir={isRTL ? "rtl" : "ltr"}
+                >
+                  <h3 className="text-2xl font-bold mb-4">
+                    {t("testimonials.letterTitle")}
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    {t("testimonials.letterDescription")}
+                  </p>
+                  <div className="mt-6 p-8 bg-muted/50 rounded-lg">
+                    <img
+                      src={lavina}
+                      alt="Sample Appreciation Letter"
+                      className="max-w-full md:max-w-md mx-auto rounded shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                      onClick={() => setLightboxOpen(true)}
+                    />
+                    <p className="text-sm text-muted-foreground mt-4">
+                      {t("testimonials.sampleLetter")}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
+          {/* Lightbox */}
+          <ImageLightbox
+            src={lavina}
+            alt="Appreciation Letter"
+            isOpen={lightboxOpen}
+            onClose={() => setLightboxOpen(false)}
+          />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
