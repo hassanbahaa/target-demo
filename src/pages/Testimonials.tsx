@@ -55,7 +55,7 @@ const Testimonials = () => {
   return (
     <>
       <Helmet>
-        <title>{t("testimonials.meta.title")}</title>
+        <title>{t("testimonials.meta.title")} , 2</title>
         <meta name="description" content={t("testimonials.meta.description")} />
 
         {/* Open Graph / Social Media Tags */}
