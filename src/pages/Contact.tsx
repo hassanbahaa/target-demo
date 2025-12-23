@@ -2,17 +2,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { Helmet } from "react-helmet-async";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 const Contact = () => {
+  const { t, language } = useLanguage();
+  const isRTL = language === "ar";
   return (
     <div className="min-h-screen">
       {/* SEO */}
       <Helmet>
-        <title>تواصل معنا | تارجت للتسويق الفندقي</title>
-        <meta
-          name="description"
-          content="تواصل معنا للاستفسار عن خدمات إدارة وتشغيل وتسويق الفنادق، فريقنا جاهز لمساعدتك والإجابة على جميع أسئلتك."
-        />
+        <title>{t("contact.meta.title")}</title>
+        <meta name="description" content={t("contact.meta.description")} />
       </Helmet>
 
       <Header />

@@ -20,6 +20,17 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 
 const translations = {
   ar: {
+    "home.meta.title":
+      "تارجت للتسويق الفندقي | حلول متكاملة لتسويق وإدارة الفنادق",
+
+    "home.meta.description":
+      "تارجت للتسويق الفندقي تقدم حلولًا احترافية لتسويق وإدارة وتشغيل الفنادق، لزيادة الحجوزات وتحسين الأداء ورفع معدلات الإشغال.",
+    // Contact SEO
+    "contact.meta.title": "تواصل معنا | تارجت للتسويق الفندقي",
+
+    "contact.meta.description":
+      "تواصل مع تارجت للتسويق الفندقي لمعرفة المزيد عن خدمات تسويق وإدارة الفنادق أو لبدء شراكة ناجحة تحقق نتائج حقيقية.",
+
     // Header
     "nav.home": "الرئيسية",
     "nav.about": "من نحن",
@@ -187,6 +198,13 @@ const translations = {
     "whatsapp.tooltip": "تواصل معنا عبر واتساب",
   },
   en: {
+    // Home SEO
+    "home.meta.title":
+      "Target Hotel Marketing | Hotel Marketing & Management Solutions",
+
+    "home.meta.description":
+      "Target Hotel Marketing provides professional hotel marketing, management, and operation solutions to increase bookings and improve performance.",
+
     // Header
     "nav.home": "Home",
     "nav.about": "About",
@@ -194,6 +212,11 @@ const translations = {
     "nav.testimonials": "Testimonials",
     "nav.contact": "Contact",
     "nav.cta": "Book Consultation",
+    // Contact SEO
+    "contact.meta.title": "Contact Us | Target Hotel Marketing",
+
+    "contact.meta.description":
+      "Contact Target Hotel Marketing to learn more about our hotel marketing, management, and digital solutions or to start a successful partnership.",
 
     // Hero Section
     "hero.title": "Comprehensive Solutions for Hotel Marketing",
