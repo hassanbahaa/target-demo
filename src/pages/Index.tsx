@@ -191,15 +191,14 @@ const Index = () => {
                       ))}
                     </div>
                     <p className="text-muted-foreground mb-4" dir="rtl">
-                      "شركة من افضل شركات التسويق حيث قامت برفع نسبة الاشغال في
-                      وقت قصير و على مدار 4 سنوات و احنا مستمرين معهم."
+                      {t("testimonials.reviews.r7")}
                     </p>
                     <p className="font-bold" dir="rtl">
                       {" "}
-                      محمد
+                      {t("testimonials.reviews.r7.author")}
                     </p>
                     <p className="text-sm text-primary" dir="rtl">
-                      فندق برج بيات
+                      {t("testimonials.reviews.r7.hotel")}
                     </p>
                   </CardContent>
                 </Card>

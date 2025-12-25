@@ -364,7 +364,7 @@ const translations = {
     "testimonials.reviews.r6.hotel": "Amwaj Aljubail Hotel",
     "testimonials.reviews.r7":
       "One of the best marketing companies; they managed to increase the occupancy rate in a short time, and over the course of 4 years we have continued working with them.",
-    "testimonials.reviews.r7.author": "محمد",
+    "testimonials.reviews.r7.author": "Mohamed",
     "testimonials.reviews.r7.hotel": "Burj Bayat Hotel",
     // CTA Section
     // CTA Section
