@@ -5,16 +5,16 @@ import {
 } from "@/components/ui/carousel";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import bookingLogo from "../assets/websites/booking.png";
-import agodaLogo from "../assets/websites/agoda.png";
-import expediaLogo from "../assets/websites/expedia.png";
-import airbnbLogo from "../assets/websites/airbnb.png";
-import gathernLogo from "../assets/websites/gathern.png";
-import almosaferLogo from "../assets/websites/almosafer.png";
-import tripadvisorLogo from "../assets/websites/tripadvisor.png";
-import hotelsLogo from "../assets/websites/hotels.png";
-import vrboLogo from "../assets/websites/vrbo.png";
-import rehlatLogo from "../assets/websites/rehlat.png";
+import bookingLogo from "../assets/websites/booking.webp";
+import agodaLogo from "../assets/websites/agoda.webp";
+import expediaLogo from "../assets/websites/expedia.webp";
+import airbnbLogo from "../assets/websites/airbnb.webp";
+import gathernLogo from "../assets/websites/gathern.webp";
+import almosaferLogo from "../assets/websites/almosafer.webp";
+import tripadvisorLogo from "../assets/websites/tripadvisor.webp";
+import hotelsLogo from "../assets/websites/hotels.webp";
+import vrboLogo from "../assets/websites/vrbo.webp";
+import rehlatLogo from "../assets/websites/rehlat.webp";
 
 import AutoScroll from "embla-carousel-auto-scroll";
 
