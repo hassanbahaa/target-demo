@@ -9,7 +9,8 @@ import AutoScroll from "embla-carousel-auto-scroll";
 // أول السطر داخل الملف (فوق الكومبوننت)
 
 const ClientsSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isRTL = language === "ar";
 
   return (
     <section className="section-padding" dir="ltr">
@@ -66,7 +67,7 @@ const ClientsSection = () => {
                       {hotel.name}
                     </h3>
                     <p className="text-sm text-gray-500 text-center emoji-font">
-                      {hotel.city} {hotel.flag}
+                      {isRTL ? hotel.city : hotel.cityEn} {hotel.flag}
                     </p>
                   </div>
                 </div>

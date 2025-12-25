@@ -5,20 +5,21 @@ import {
 } from "@/components/ui/carousel";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import bookingLogo from '../assets/websites/booking.png';
-import agodaLogo from '../assets/websites/agoda.png';
-import expediaLogo from '../assets/websites/expedia.png';
-import airbnbLogo from '../assets/websites/airbnb.png';
-import gathernLogo from '../assets/websites/gathern.png';
-import almosaferLogo from '../assets/websites/almosafer.png';
-import tripadvisorLogo from '../assets/websites/tripadvisor.png';
-import hotelsLogo from '../assets/websites/hotels.png';
-import vrboLogo from '../assets/websites/vrbo.png';
+import bookingLogo from "../assets/websites/booking.png";
+import agodaLogo from "../assets/websites/agoda.png";
+import expediaLogo from "../assets/websites/expedia.png";
+import airbnbLogo from "../assets/websites/airbnb.png";
+import gathernLogo from "../assets/websites/gathern.png";
+import almosaferLogo from "../assets/websites/almosafer.png";
+import tripadvisorLogo from "../assets/websites/tripadvisor.png";
+import hotelsLogo from "../assets/websites/hotels.png";
+import vrboLogo from "../assets/websites/vrbo.png";
+import rehlatLogo from "../assets/websites/rehlat.png";
 
 import AutoScroll from "embla-carousel-auto-scroll";
 
 const platforms = [
-  { name: "Booking.com", logo:bookingLogo },
+  { name: "Booking.com", logo: bookingLogo },
   { name: "Expedia", logo: expediaLogo },
   { name: "Agoda", logo: agodaLogo },
   { name: "TripAdvisor", logo: tripadvisorLogo },
@@ -27,6 +28,7 @@ const platforms = [
   { name: "Gathern", logo: gathernLogo },
   { name: "Hotels", logo: hotelsLogo },
   { name: "Vrbo", logo: vrboLogo },
+  { name: "Rehlat", logo: rehlatLogo },
 ];
 
 const PlatformsSection = () => {
@@ -37,10 +39,10 @@ const PlatformsSection = () => {
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t('platforms.title')}
+            {t("platforms.title")}
           </h2>
           <p className="text-xl text-muted-foreground">
-            {t('platforms.subtitle')}
+            {t("platforms.subtitle")}
           </p>
         </div>
 
