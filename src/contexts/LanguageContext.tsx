@@ -171,7 +171,10 @@ const translations = {
       "لكم منا كل الاحترام و التقدير على الجهود المبذول في التسويق و تقدم سير العمل و حسن التعامل مع المنشأة و مع العملاء .",
     "testimonials.reviews.r6.author": "محمد مصطفى",
     "testimonials.reviews.r6.hotel": "فندق أمواج الجبيل",
-
+    "testimonials.reviews.r7":
+      "شركة من افضل شركات التسويق حيث قامت برفع نسبة الاشغال في وقت قصير و على مدار 4 سنوات و احنا مستمرين معهم.",
+    "testimonials.reviews.r7.author": "محمد",
+    "testimonials.reviews.r7.hotel": " فندق برج بيات",
     // CTA Section
     "cta.title": "ابدأ شراكتك معنا اليوم",
     "cta.button": "تواصل الآن",
@@ -359,6 +362,11 @@ const translations = {
       "You have our utmost respect and appreciation for your dedicated efforts in marketing, the progress of operations, and your excellent professionalism in dealing with both the establishment and the clients.",
     "testimonials.reviews.r6.author": "Mohamed Mostafa",
     "testimonials.reviews.r6.hotel": "Amwaj Aljubail Hotel",
+    "testimonials.reviews.r7":
+      "One of the best marketing companies; they managed to increase the occupancy rate in a short time, and over the course of 4 years we have continued working with them.",
+    "testimonials.reviews.r7.author": "محمد",
+    "testimonials.reviews.r7.hotel": "Burj Bayat Hotel",
+    // CTA Section
     // CTA Section
     "cta.title": "Start Your Partnership With Us Today",
     "cta.button": "Contact Now",

@@ -58,13 +58,13 @@ const ClientsSection = () => {
                         {/* Fallback لـ JPG لو المتصفح مش يدعم WebP */}
                         <img
                           src={`/hotels/${hotel.id}.jpg`}
-                          alt={hotel.name}
+                          alt={hotel.nameEn}
                           className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                         />
                       </picture>
                     </div>
                     <h3 className="text-base font-semibold mt-3 break-words px-2">
-                      {hotel.name}
+                      {isRTL ? hotel.name : hotel.nameEn}
                     </h3>
                     <p className="text-sm text-gray-500 text-center emoji-font">
                       {isRTL ? hotel.city : hotel.cityEn} {hotel.flag}

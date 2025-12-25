@@ -169,14 +169,13 @@ const Index = () => {
                       ))}
                     </div>
                     <p className="text-muted-foreground mb-4" dir="rtl">
-                      "شركة ممتازة و تقدم خدمات افضل, انصح بهم و بشدة اعمل معهم
-                      منذ 3 سنوات و الحمدلله."
+                      {t("testimonials.reviews.r3")}
                     </p>
                     <p className="font-bold" dir="rtl">
-                      هاني عبد المحسن العمري
+                      {t("testimonials.reviews.r3.author")}
                     </p>
                     <p className="text-sm text-primary" dir="rtl">
-                      فندق كيان للاجنحة الفندقية جدة
+                      {t("testimonials.reviews.r3.hotel")}
                     </p>
                   </CardContent>
                 </Card>
