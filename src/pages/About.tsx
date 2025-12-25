@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Users, Target, Award } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import targetLogo from "@/assets/targetlogo.png";
+import targetLogo from "@/assets/targetlogo.webp";
 import { Helmet } from "react-helmet-async"; // الإمبورت الصحيح
 import { useLanguage } from "@/contexts/LanguageContext";
 

@@ -3,7 +3,7 @@ import { Menu, Languages } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import targetLogo from "@/assets/targetlogo.png";
+import targetLogo from "@/assets/targetlogo.webp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,9 +20,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={targetLogo} 
-              alt="Target Hotel Marketing Logo" 
+            <img
+              src={targetLogo}
+              alt="Target Hotel Marketing Logo"
               className="h-12 w-auto object-contain transition-all duration-300 group-hover:opacity-80 group-hover:scale-105"
             />
             <div className="text-sm sm:text-base md:text-lg font-semibold text-foreground">
@@ -32,35 +32,45 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link 
+            <Link
               to="/"
-              className={`text-foreground hover:text-primary transition-colors ${isActive('/') ? 'text-primary font-semibold' : ''}`}
+              className={`text-foreground hover:text-primary transition-colors ${
+                isActive("/") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.home')}
+              {t("nav.home")}
             </Link>
-            <Link 
+            <Link
               to="/about"
-              className={`text-foreground hover:text-primary transition-colors ${isActive('/about') ? 'text-primary font-semibold' : ''}`}
+              className={`text-foreground hover:text-primary transition-colors ${
+                isActive("/about") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.about')}
+              {t("nav.about")}
             </Link>
-            <Link 
+            <Link
               to="/services"
-              className={`text-foreground hover:text-primary transition-colors ${isActive('/services') ? 'text-primary font-semibold' : ''}`}
+              className={`text-foreground hover:text-primary transition-colors ${
+                isActive("/services") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.services')}
+              {t("nav.services")}
             </Link>
-            <Link 
+            <Link
               to="/testimonials"
-              className={`text-foreground hover:text-primary transition-colors ${isActive('/testimonials') ? 'text-primary font-semibold' : ''}`}
+              className={`text-foreground hover:text-primary transition-colors ${
+                isActive("/testimonials") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.testimonials')}
+              {t("nav.testimonials")}
             </Link>
-            <Link 
+            <Link
               to="/contact"
-              className={`text-foreground hover:text-primary transition-colors ${isActive('/contact') ? 'text-primary font-semibold' : ''}`}
+              className={`text-foreground hover:text-primary transition-colors ${
+                isActive("/contact") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.contact')}
+              {t("nav.contact")}
             </Link>
           </div>
 
@@ -72,12 +82,12 @@ const Header = () => {
               aria-label="Toggle Language"
             >
               <Languages className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "ar" ? "EN" : "عربي"}</span>
+              <span className="text-sm font-medium">
+                {language === "ar" ? "EN" : "عربي"}
+              </span>
             </button>
             <Link to="/contact">
-              <Button className="btn-primary">
-                {t('nav.cta')}
-              </Button>
+              <Button className="btn-primary">{t("nav.cta")}</Button>
             </Link>
           </div>
 
@@ -89,9 +99,11 @@ const Header = () => {
               aria-label="Toggle Language"
             >
               <Languages className="w-4 h-4" />
-              <span className="text-xs font-medium">{language === "ar" ? "EN" : "عربي"}</span>
+              <span className="text-xs font-medium">
+                {language === "ar" ? "EN" : "عربي"}
+              </span>
             </button>
-            <button 
+            <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -103,45 +115,53 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
-            <Link 
+            <Link
               to="/"
               onClick={closeMenu}
-              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${isActive('/') ? 'text-primary font-semibold' : ''}`}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${
+                isActive("/") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.home')}
+              {t("nav.home")}
             </Link>
-            <Link 
+            <Link
               to="/about"
               onClick={closeMenu}
-              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${isActive('/about') ? 'text-primary font-semibold' : ''}`}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${
+                isActive("/about") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.about')}
+              {t("nav.about")}
             </Link>
-            <Link 
+            <Link
               to="/services"
               onClick={closeMenu}
-              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${isActive('/services') ? 'text-primary font-semibold' : ''}`}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${
+                isActive("/services") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.services')}
+              {t("nav.services")}
             </Link>
-            <Link 
+            <Link
               to="/testimonials"
               onClick={closeMenu}
-              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${isActive('/testimonials') ? 'text-primary font-semibold' : ''}`}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${
+                isActive("/testimonials") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.testimonials')}
+              {t("nav.testimonials")}
             </Link>
-            <Link 
+            <Link
               to="/contact"
               onClick={closeMenu}
-              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${isActive('/contact') ? 'text-primary font-semibold' : ''}`}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors ${
+                isActive("/contact") ? "text-primary font-semibold" : ""
+              }`}
             >
-              {t('nav.contact')}
+              {t("nav.contact")}
             </Link>
             <Link to="/contact" onClick={closeMenu}>
-              <Button className="btn-primary w-full">
-                {t('nav.cta')}
-              </Button>
+              <Button className="btn-primary w-full">{t("nav.cta")}</Button>
             </Link>
           </div>
         )}
